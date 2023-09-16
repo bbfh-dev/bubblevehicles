@@ -1,0 +1,13 @@
+{
+  "name": "bubblevehicles",
+  "description": "[{\"text\":\"Fabulous server-side vehicles\", \"color\":\"yellow\", {\"text\":\"\nby bbfh\", \"color\":\"dark_gray\"}]",
+  "author": "bbfh (BubbleFish)",
+  "version": "4.0.0",
+  "output": "build",
+  "require": [],
+  "data_pack": {
+    "load": ["src"],
+    "zipped": true
+  },
+  "pipeline": ["plugins.bubblevehicles.run_pipeline", "plugins.auto_vars.run"]
+}

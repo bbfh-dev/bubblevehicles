@@ -1,0 +1,5 @@
+.beet_cache
+.idea
+build
+venv
+**/__pycache__

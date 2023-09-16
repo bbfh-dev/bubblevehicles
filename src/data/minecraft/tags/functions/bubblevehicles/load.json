@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "bubblevehicles:load",
+    "bubblevehicles:tick",
+    "minecraft:bubblevehicles/garbage_collector"
+  ]
+}
