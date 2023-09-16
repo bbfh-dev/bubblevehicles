@@ -4,7 +4,7 @@ from beet import Context, Function
 from colorama import Fore
 
 
-def run(ctx: Context):
+def run_pipeline(ctx: Context):
     """
     Finds all usages of "<int> bbfh.auto"
     and initializes used variables
