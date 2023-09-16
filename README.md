@@ -1,21 +1,13 @@
-# Vehicles
+# BubbleVehicles
+Fabulous server-side vehicles [minecraft datapack](https://minecraft.fandom.com/wiki/Data_pack).
+It doesn't require resource packs or mods, has many features and great optimization.
 
-```py
-from plugins.vehicles.car import Car, Vehicle
-from plugins.vehicles.units import Size
+For questions/suggestions/other feel free to join [my Discord server](https://discord.gg/4uN3SbfZrT)
 
-class Rofi(Car):
-    size = Size(width=3.0, height=1.0)
-    attributes = Car.Attributes(
-        health=100,
-        max_speed=100,
-        wheel_base=4.0,
-    )
-    model = Vehicle.Model(
-        elements=[
-            Block()
-        ],
-        offset=(0, 0, 0),
-        scale=0.75,
-    )
-```
+### Table of contents
+- [Installation](#installation)
+
+# Installation
+- Download the [latest release](https://github.com/bubblefish-dev/bubblevehicles/releases/latest) or use [Modrinth](https://modrinth.com/datapack/bubblevehicles).
+- Put `bubblevehicles_x.x.x_data_pack.zip` into your world's `datapacks/` directory.
+- Reopen the world or run `/reload`
