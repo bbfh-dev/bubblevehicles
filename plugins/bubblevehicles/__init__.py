@@ -1,8 +1,9 @@
 from beet import Context
 
-from plugins.utils import Log, as_function, as_nbt_string
+from plugins.utils import Log, as_function
 from .vehicles.car import Car, Rofi
 from .vehicles.car.pineda import Pineda
+from .vehicles.nbt import as_nbt_string
 from .vehicles.vehicle import BaseVehicle
 
 REGISTRY = [Rofi, Pineda]

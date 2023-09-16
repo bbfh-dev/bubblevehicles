@@ -1,6 +1,7 @@
 from typing import cast
 
-from plugins.utils import as_nbt_string, quote
+from plugins.utils import quote
+from ..nbt import as_nbt_string
 from ..structs import BoxSize, PlayerHead, Point
 from ..unit import Block, Item
 from ..vehicle import BaseAttributes, BaseVehicle
