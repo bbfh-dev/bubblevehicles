@@ -110,7 +110,7 @@ class Car(BaseVehicle):
                         "--bbfh.new",
                     ],
                     "width": 0.75,
-                    "height": 1.25,
+                    "height": 1.5,
                     "response": True,
                     "Passengers": [
                         {
@@ -155,7 +155,7 @@ class Car(BaseVehicle):
     def get_attribute_variables(cls):
         attr = cls.get_attributes()
         return [
-            f"health {attr.base.health}",
+            f"max_health {attr.base.max_health}",
             f"is_paintable {int(attr.base.is_paintable)}",
             f"max_speed {attr.max_speed}",
         ]
