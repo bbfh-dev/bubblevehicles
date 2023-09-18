@@ -8,7 +8,7 @@ from ..vehicle import BaseAttributes
 class Pineda(Car):
     hitbox = BoxSize(x=4, y=1.0)
     attributes = CarAttributes(
-        BaseAttributes(health=105, is_paintable=False),
+        BaseAttributes(max_health=105, is_paintable=False),
         max_speed=100,
         front_wheels=BoxSize(x=1.4, y=1.25),
         rear_wheels=BoxSize(x=1.4, y=-1.5),

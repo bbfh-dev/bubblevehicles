@@ -8,7 +8,7 @@ from ..vehicle import BaseAttributes
 class Rofi(Car):
     hitbox = BoxSize(x=3.0, y=1.0)
     attributes = CarAttributes(
-        BaseAttributes(health=100, is_paintable=True),
+        BaseAttributes(max_health=100, is_paintable=True),
         max_speed=100,
         front_wheels=BoxSize(x=1.4, y=2),
         rear_wheels=BoxSize(x=1.4, y=-1.25),

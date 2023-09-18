@@ -2,12 +2,12 @@ from typing import cast
 
 from plugins.utils import quote
 from .model import Model
-from .structs import BoxSize
+from .structs import BoxSize, NBTByte
 
 
 class BaseAttributes:
-    def __init__(self, *, health: int, is_paintable: bool):
-        self.health = health
+    def __init__(self, *, max_health: int, is_paintable: bool):
+        self.max_health = max_health
         self.is_paintable = is_paintable
 
 
@@ -32,6 +32,12 @@ class BaseVehicle:
             "NoBasePlate": True,
             "PersistenceRequired": True,
             "DisabledSlots": 4144959,
+            "ArmorItems": [
+                {"id": "chest", "Count": NBTByte(1), "tag": {"bbfh_items": []}},
+                {},
+                {},
+                {},
+            ],
             "Passengers": [
                 unit.as_dict(
                     cls.get_hitbox().x,
