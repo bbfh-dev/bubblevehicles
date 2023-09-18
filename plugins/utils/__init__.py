@@ -24,8 +24,5 @@ def quote(string: str):
 
 def find_and_replace_in_function(fn: Function, target: str, *replacements: str):
     fn.set_content(
-        fn.get_content().replace(
-            f"#> INSERT <{target}>",
-            "\n".join(replacements)
-        )
+        fn.get_content().replace(f"#> INSERT <{target}>", "\n".join(replacements))
     )

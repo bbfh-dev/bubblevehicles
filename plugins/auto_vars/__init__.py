@@ -24,9 +24,6 @@ def run_pipeline(ctx: Context):
         ctx.data.functions["bubblevehicles:load"],
         "bbfh.auto",
         "scoreboard objectives add bbfh.auto dummy",
-        *[
-            f"scoreboard players set {value} bbfh.auto {value}"
-            for value in values
-        ]
+        *[f"scoreboard players set {value} bbfh.auto {value}" for value in values],
     )
     Log("AutoVars").info("Initialized", f"{len(values)} constants")
