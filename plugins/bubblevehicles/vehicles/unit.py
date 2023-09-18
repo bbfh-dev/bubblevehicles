@@ -33,6 +33,9 @@ class Unit:
         return new_unit
 
     def get_scaled_pos(self, offset: Point):
+        """
+        :return: Position scaled and offset accordingly
+        """
         return Point(
             self.pos.center_x * self.scale.x + offset.x,
             self.pos.center_z * self.scale.z + offset.z,
@@ -55,8 +58,12 @@ class DisplayEntity(Unit):
         super().__init__(get(name, self.get_name()), pos, rot, scale)
 
     def get_brightness(self):
-        value = 15 * int(self.full_bright)
-        return {"brightness": {"sky": value, "block": value}}
+        """
+        :return: Dictionary used for setting brightness of a display entity
+        """
+        if self.full_bright:
+            return {"brightness": {"sky": 15, "block": 15}}
+        return {}
 
     def as_partial_dict(self):
         """
@@ -185,6 +192,10 @@ def mirror(*units: Unit, axis: Axis, offset: Point) -> list[Unit]:
     """
 
     def mirror_attr(attr: Point):
+        """
+        Used to ensure no code repeatition in the future
+        in-case there will be a need for mirroring other attributes (preferably)
+        """
         return Point(
             attr.x * -1 + offset.x if axis is Axis.X else attr.x,
             attr.z * -1 + offset.z if axis is Axis.Z else attr.z,
