@@ -27,6 +27,7 @@ class Pipeline:
                 )
                 for i in self.vehicle.get_attribute_variables()
             ],
+            "scoreboard players set @e[type=armor_stand,tag=bbfh.origin,tag=--bbfh.new] bbfh.color 0",
             "team join bubblevehicles @e[tag=--bbfh.new]",
             "function bubblevehicles:registry/set_entry",
         )
