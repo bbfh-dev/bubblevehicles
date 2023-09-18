@@ -9,5 +9,9 @@
     "load": ["src"],
     "zipped": true
   },
-  "pipeline": ["plugins.bubblevehicles.run_pipeline", "plugins.auto_vars.run_pipeline"]
+  "pipeline": [
+    "plugins.bubblevehicles.run_pipeline",
+    "plugins.auto_vars.run_pipeline",
+    "plugins.paint_job_list.run_pipeline"
+  ]
 }
