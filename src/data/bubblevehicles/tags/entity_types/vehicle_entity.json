@@ -1,0 +1,11 @@
+{
+  "values": [
+    "interaction",
+    "block_display",
+    "item_display",
+    "text_display",
+    "armor_stand",
+    "llama",
+    "player"
+  ]
+}

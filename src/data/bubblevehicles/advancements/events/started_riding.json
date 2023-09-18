@@ -1,0 +1,17 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": {
+          "vehicle": {
+            "nbt": "{Tags:[\"bbfh.seat_entity\"]}"
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "minecraft:bubblevehicles/events/started_riding"
+  }
+}
