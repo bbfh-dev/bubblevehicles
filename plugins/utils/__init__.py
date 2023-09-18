@@ -20,3 +20,12 @@ def quote(string: str):
     if '"' in string:
         return "'{}'".format(string)
     return '"{}"'.format(string)
+
+
+def find_and_replace_in_function(fn: Function, target: str, *replacements: str):
+    fn.set_content(
+        fn.get_content().replace(
+            f"#> INSERT <{target}>",
+            "\n".join(replacements)
+        )
+    )

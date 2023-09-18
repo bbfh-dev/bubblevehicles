@@ -3,6 +3,8 @@ import os
 from beet import Context, Function
 from colorama import Fore
 
+from plugins.utils import Log, find_and_replace_in_function
+
 
 def run_pipeline(ctx: Context):
     """
@@ -18,21 +20,13 @@ def run_pipeline(ctx: Context):
             if substr == -1:
                 continue
             values.add(line[:substr].split(" ")[-1])
-    fn: Function = ctx.data.functions["bubblevehicles:load"]
-    fn.set_content(
-        fn.get_content().replace(
-            "#> INSERT <bbfh.auto>",
-            "scoreboard objectives add bbfh.auto dummy\n"
-            + "\n".join(
-                [
-                    f"scoreboard players set {value} bbfh.auto {value}"
-                    for value in values
-                ]
-            ),
-        )
+    find_and_replace_in_function(
+        ctx.data.functions["bubblevehicles:load"],
+        "bbfh.auto",
+        "scoreboard objectives add bbfh.auto dummy",
+        *[
+            f"scoreboard players set {value} bbfh.auto {value}"
+            for value in values
+        ]
     )
-    print(
-        f"{Fore.LIGHTBLACK_EX}PLUGIN/{Fore.RESET}AutoVars "
-        f"{Fore.LIGHTBLACK_EX}:: "
-        f"Initialized {len(values)} used constants{Fore.RESET}"
-    )
+    Log("AutoVars").info("Initialized", f"{len(values)} constants")
